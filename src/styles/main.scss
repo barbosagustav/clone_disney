@@ -1,4 +1,17 @@
-@import '_hero';
+@use 'hero';
+@use 'variaveis';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../src/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../src/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
 
 * {
     margin: 0;
@@ -7,17 +20,19 @@
 }
 
 body {
+    background-color: variaveis.$cordeFundo;
+    font-family: Avenir, sans-serif;
 }
-
-// Mixings 
 
 @mixin text ($fontSize: 16px){
     font-size: $fontSize;
     line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
 }
 
 @mixin title ($fontSize: 40px) {
     @include text($fontSize );
+    color: variaveis.$corTextoSecundario;
 
 }
 
@@ -30,10 +45,16 @@ body {
 }
 
 .text--small {
-    @include text(12px)
+    @include text(12px);
+    color: variaveis.$corTextoSecundario;
+}
+
+.title--small {
+    @include title(30px);
 }
 
 .link-text {
     @include text(18px);
     text-decoration: underline;
+    color: variaveis.$corTextoSecundario;
 }
