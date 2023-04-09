@@ -1,0 +1,39 @@
+@import '_hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+}
+
+// Mixings 
+
+@mixin text ($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+@mixin title ($fontSize: 40px) {
+    @include text($fontSize );
+
+}
+
+.text--big {
+    @include text(18px)
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px)
+}
+
+.link-text {
+    @include text(18px);
+    text-decoration: underline;
+}
