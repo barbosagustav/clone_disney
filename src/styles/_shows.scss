@@ -25,16 +25,22 @@
 
     &__list {
         margin-top: 60px;
-        display: flex;
-        flex-wrap: wrap;
+        display: none;
         justify-content: center;
-        width: 100%;
+        width: 90%;
 
+        &--is-active {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
         &__item {
             img {
-                margin: 10px;
+                margin: 40px;
                 max-width: 400px;
                 border-radius: 4px;
+
             }
         }
     }
