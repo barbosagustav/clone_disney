@@ -54,6 +54,12 @@
                     margin-bottom: 8px;
                     border: none;
                 }
+
+                button:hover {
+                    background-color: #4719b4;
+                    transition: .5s;
+                    cursor: pointer;
+                }
             }
 
 

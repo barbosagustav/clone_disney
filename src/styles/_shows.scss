@@ -1,0 +1,43 @@
+@use 'variaveis';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+
+        &__button {
+            color: #f9f9f9;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            cursor: pointer;
+
+            &--is-active {
+                border-bottom: 5px solid #f9f9f9;
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+
+        &__item {
+            img {
+                margin: 10px;
+                max-width: 400px;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    
+}
