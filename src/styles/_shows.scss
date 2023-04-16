@@ -9,7 +9,7 @@
         justify-content: center;
 
         &__button {
-            color: #f9f9f9;
+            color: variaveis.$corTextoSecundario;
             font-size: 20px;
             border: none;
             padding-bottom: 5px;
@@ -19,7 +19,7 @@
             cursor: pointer;
 
             &--is-active {
-                border-bottom: 5px solid #f9f9f9;
+                border-bottom: 5px solid variaveis.$corTextoSecundario;
             }
         }
     }
