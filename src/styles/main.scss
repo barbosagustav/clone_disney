@@ -4,6 +4,8 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -21,6 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
@@ -74,25 +77,51 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 16px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corDeFundoBotaoPrimario;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
-    border: none;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
 
     &:hover {
-        background-color: #4719b4;
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
         transition: .5s;
         cursor: pointer;
     }
-}
 
+    &--secondary {
+        background-color: variaveis.$corDeFundoBotaoSecundario;
+        border-color: variaveis.$corDeFundoBotaoSecundario;
+
+        &:hover {
+            background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+            transition: .5s;
+            cursor: pointer;
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$cordeFundoBotaoDark, 0.8);
+        border-color: variaveis.$corTextoSecundario;
+
+            &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            color: variaveis.$cordeFundoBotaoDark;
+            transition: .5s;
+            cursor: pointer;
+    }
+}
+}
 .image-text-section {
     padding: 5.6vw;
     display: grid;
