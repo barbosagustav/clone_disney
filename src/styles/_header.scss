@@ -12,6 +12,7 @@
         background-color: transparent;
         transition: background-color .5s ease;
 
+
         .header__logo {
             opacity: 0;
             visibility: hidden;
@@ -28,12 +29,15 @@
         padding: 8px 36px;
         display: flex;
         justify-content: space-between;
+
+
     }
 
     &__logo {
         max-width: 80px;
         width: 100%;
         transition: opacity .5s ease;
+        min-width: 100px;
     }
 
     &__links {
@@ -41,6 +45,9 @@
         &__item {
             transition: opacity .5s ease;
             margin: 5px;
+            text-align: center;
+
+
         }
     }
 

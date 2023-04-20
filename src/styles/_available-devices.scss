@@ -10,10 +10,23 @@
         display: grid;
         gap: 24px;
         grid-template-columns: repeat(4,25%);
+        
+            @media (max-width: 1023px) {
+                grid-template-columns: 1fr 1fr;
+                place-items: center;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+    }
+
 
         &__item {
             text-align: center;
             list-style-type: none;
+
+            @media (max-width: 1023px) {
+                max-width: 40%;
+            }
 
             h4 {
                 margin-top: 20px;

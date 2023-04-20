@@ -2,13 +2,28 @@
 
 .hero {
     padding-top: 28px;
-    padding-left: 56px;
+    padding-left: 35px;
     min-height: 80vh;
     background-image: url(../images/hero_desktop.jpeg);
     background-repeat: no-repeat;
-    background-position: 0px -40px;
+    background-position: 0px -70px;
     background-size: cover;
     text-align: center;
+    margin-bottom: 70px;
+
+    @media (max-width: 1023px) {
+        background-image: url(../images/hero_tablet.jpg);
+        background-size: contain;
+        background-position: top;
+        padding-left: 0px;
+        margin-bottom: 40px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        padding-top: 50%;
+    }
+
+
 
     .button {
         margin-top: 2w;
@@ -38,6 +53,11 @@
         &__combos {
             display: flex;
             justify-content: space-between;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
             
             &__combo {
                 width: 48%;

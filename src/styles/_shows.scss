@@ -1,7 +1,6 @@
 @use 'variaveis';
 
 .shows {
-    padding: 2vw 5.6vw;
     min-height: 50vw;
 
     &__tabs {
@@ -27,12 +26,20 @@
     &__list {
         margin-top: 60px;
         display: none;
-        justify-content: center;
-        width: 90%;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+
+        @media (max-width: 1594px) {
+            grid-template-columns: 1fr 1fr;
+            
+        }
+
+        @media (max-width: 1023px) {
+            grid-template-columns: 1fr;
+        }
 
         &--is-active {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid
             
         }
         
@@ -41,6 +48,10 @@
                 margin: 40px;
                 max-width: 400px;
                 border-radius: 4px;
+
+                    @media (max-width: 768px) {
+                        width: 80vw;
+                    }
 
             }
         }

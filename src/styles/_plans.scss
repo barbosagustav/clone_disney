@@ -9,6 +9,14 @@
         display: flex;
         justify-content: space-around;
 
+        @media (max-width: 1144px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
         &__item {
             text-align: center;
             padding: 60px 44px 44px;
@@ -24,6 +32,13 @@
 
             img {
                 height: 83px;
+
+                @media (max-width: 768px) {
+                    height: 12vw;
+                    min-height: 12px;
+
+
+                }
             }
         
             strong {
